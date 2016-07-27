@@ -1,0 +1,5 @@
+setwd("D:/r_workspace")
+dataset2 <- read.csv("D:/pip/testSNP2.csv",stringsAsFactors = FALSE)
+column.name <- colnames(dataset2)
+result1 <- do.call(paste, c(dataset2[column.name], sep = "|")) 
+snp <-  read.table(text = result1,sep = "|")
